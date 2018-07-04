@@ -14,8 +14,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.Reader;
 import java.io.Writer;
-import java.net.InetSocketAddress;
-import java.net.Proxy;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
@@ -100,8 +98,6 @@ public class SearchProFinal {
 
                     URL url = new URL(urlText);
                     URLConnection connectURL = url.openConnection();
-//                    Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("10.225.3.1", 3128));
-//                    URLConnection connectURL = new URL(urlText).openConnection(proxy);
 
                     try (BufferedReader inputURL = new BufferedReader(new InputStreamReader(
                             connectURL.getInputStream(), StandardCharsets.UTF_8))) {
